@@ -24,5 +24,6 @@ Corrections, have to be applied whenever digits aren't properly recognized.
 ### Future Updates:
 I plan to implement a much more robust image extraction technique. Also, I would like to implement a feature such that the user can input their image via their webcam or mobile camera.
 
-
+### How to run?
+Check if you have all the libraries as required by requirements.txt. Run the test_model.py file. You can choose your own image, by editing the file path specified in that file. Also mention any corrections in the correction list in the form of (x,y,correction), where x,y is the coordinates of the cell, which needs correction.
 
