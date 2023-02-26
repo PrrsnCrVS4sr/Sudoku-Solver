@@ -6,7 +6,8 @@ import sys
 import re
 import operator
 from model import Trainer
-from solver import Solver
+# from solver import Z3Solver
+from solver_z3 import Z3Solver
 from skimage.segmentation import clear_border
 import imutils
 
@@ -306,7 +307,7 @@ class Detector:
         # print(self.digits)
         self.answers = [[self.digits[j][i]
                          for i in range(9)] for j in range(9)]
-        s = Solver(self.answers)
+        s = Z3Solver(self.answers)
         if s.solve():
             self.showSudoku(self.digits)
             self.answers = s.digits
